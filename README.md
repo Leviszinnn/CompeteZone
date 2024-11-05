@@ -3,6 +3,7 @@
 <h3>Sistema Gerenciador de Partidas Online</h3>
 
 <p>Projeto educacional para avaliação de conhecimentos envolvendo CRUD em Java e MySQL</p>
+<p>O objetivo do projeto é criar um sistema que tenha como principal função gerenciar torneios de jogos online, para que a comunidade de jogadores possa se unificar cada vez mais e dar espaço para novos players ingressarem nos cenários competitivos</p>
 
 <h3>Divisão de Tarefas</h3>
 <br>
