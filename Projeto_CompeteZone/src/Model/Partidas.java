@@ -9,5 +9,5 @@ package Model;
  * @author alunocmc
  */
 public class Partidas {
-    
+    // Declara a classe Partidas
 }

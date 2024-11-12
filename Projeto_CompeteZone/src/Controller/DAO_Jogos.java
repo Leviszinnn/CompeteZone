@@ -9,5 +9,5 @@ package Controller;
  * @author alunocmc
  */
 public class DAO_Jogos {
-    
+    // Desenvolver o CRUD relacionado a classe Jogos
 }

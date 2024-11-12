@@ -9,5 +9,5 @@ package Controller;
  * @author alunocmc
  */
 public class DAO_Usuario {
-    
+    // Desenvolver o CRUD relacionado a classe Usuario
 }
