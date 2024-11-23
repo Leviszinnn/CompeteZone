@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -50,6 +51,7 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
         jEmail = new javax.swing.JTextField();
         jCadastrar = new javax.swing.JButton();
         jStatus = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,7 +67,6 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Data Nasc:");
 
-        jAno_nasc.setText("aaaa-mm-dd");
         jAno_nasc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jAno_nascActionPerformed(evt);
@@ -82,42 +83,49 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Voltar");
+
         javax.swing.GroupLayout Cadastro_UsuarioLayout = new javax.swing.GroupLayout(Cadastro_Usuario);
         Cadastro_Usuario.setLayout(Cadastro_UsuarioLayout);
         Cadastro_UsuarioLayout.setHorizontalGroup(
             Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(jLabel1)
-                .addContainerGap(110, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Cadastro_UsuarioLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel3)
-                        .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(38, 38, 38)
-                            .addComponent(jNome, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel4)
-                        .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addGap(43, 43, 43)
-                            .addComponent(jEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
-                            .addComponent(jCadastrar)
-                            .addGap(68, 68, 68)
-                            .addComponent(jStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jUsername, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jAno_nasc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(59, 59, 59))
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
+                        .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jUsername, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jAno_nasc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel3)
+                                .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addGap(38, 38, 38)
+                                    .addComponent(jNome, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel4)
+                                .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addGap(43, 43, 43)
+                                    .addComponent(jEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
+                                    .addComponent(jCadastrar)
+                                    .addGap(68, 68, 68)
+                                    .addComponent(jStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(59, 59, 59))
+                    .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(33, 33, 33))))
         );
         Cadastro_UsuarioLayout.setVerticalGroup(
             Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Cadastro_UsuarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addGroup(Cadastro_UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -191,6 +199,8 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Erro: "+ex.getMessage());
             jStatus.setText("Erro ao cadastrar!");
+        } catch (ParseException ex) {
+            java.util.logging.Logger.getLogger(TelaCadastroJogadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
 
@@ -239,6 +249,7 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Cadastro_Usuario;
     private javax.swing.JTextField jAno_nasc;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jCadastrar;
     private javax.swing.JTextField jEmail;
     private javax.swing.JLabel jLabel1;

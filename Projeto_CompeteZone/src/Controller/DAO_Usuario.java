@@ -42,7 +42,7 @@ public class DAO_Usuario {
     }
     
     public void Alterar(Usuario user) throws SQLException, ClassNotFoundException {
-        String sql = "update jogadores set titulo=?, descricao=?, status=? where id = ?";
+        String sql = "update jogadores set nome=?, username=?, ano_nasc=?, email=? where id = ?";
         PreparedStatement st = null;
         Connection conexao = null;
         try {
