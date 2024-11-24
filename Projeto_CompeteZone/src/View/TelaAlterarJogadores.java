@@ -188,14 +188,14 @@ public class TelaAlterarJogadores extends javax.swing.JFrame {
         user.setEmail(email);
         try {
             dUser.Alterar(user);
-            jStatus.setText("Alterado com sucesso!");
+            //jStatus.setText("Alterado com sucesso!");
             System.out.println(user.getNome() + user.getUsername() + user.getAno_nasc() + user.getEmail());
         } catch (SQLException ex) {
             System.out.println("Erro: "+ex.getMessage());
-            jStatus.setText("Erro ao alterar!");
+            //jStatus.setText("Erro ao alterar!");
         } catch (ClassNotFoundException ex) {
             System.out.println("Erro: "+ex.getMessage());
-            jStatus.setText("Erro ao alterar!");
+            //jStatus.setText("Erro ao alterar!");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
