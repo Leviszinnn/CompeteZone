@@ -42,19 +42,19 @@ public class DAO_Usuario {
     }
     
     public void Alterar(Usuario user) throws SQLException, ClassNotFoundException {
-        String sql = "update jogadores set nome=?, username=?, ano_nasc=?, email=? where id = ?";
-        PreparedStatement st = null;
+        String sql = "update jogadores set nome=?, username=?, ano_nasc=?, email=? where i = ?";
         Connection conexao = null;
-        try {
+        PreparedStatement st = null;      
+        try {  
             conexao = new Conexao().getConnection();
-            st = conexao.prepareStatement(sql);
-            st.setInt(1, user.getId());
-            st.setString(2, user.getNome());
-            st.setString(3, user.getUsername());
-            st.setString(4, user.getAno_nasc());
-            st.setString(5, user.getEmail());
+            st = conexao.prepareStatement(sql);  
+            st.setString(1, user.getNome());
+            st.setString(2, user.getUsername());
+            st.setString(3, user.getAno_nasc());
+            st.setString(4, user.getEmail());
+            st.setInt(5, user.getId());
             st.executeUpdate();
-        } catch(ClassNotFoundException|SQLException ex){
+        } catch(SQLException ex){
             System.out.println("Erro: "+ex.getMessage());
         }
     }
