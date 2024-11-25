@@ -84,6 +84,11 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
         });
 
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Cadastro_UsuarioLayout = new javax.swing.GroupLayout(Cadastro_Usuario);
         Cadastro_Usuario.setLayout(Cadastro_UsuarioLayout);
@@ -209,6 +214,12 @@ public class TelaCadastroJogadores extends javax.swing.JFrame {
     private void jAno_nascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAno_nascActionPerformed
         
     }//GEN-LAST:event_jAno_nascActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Tela t = new Tela();
+        t.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     /**
